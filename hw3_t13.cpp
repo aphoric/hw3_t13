@@ -6,14 +6,16 @@ Jacob Castro
 
 #include <iostream>
 using namespace std;
-int main(){
-char option;
-
+void showMenu(){
   cout << "Rational Numbers Calculator" << endl << endl;
   cout << "(A)ddition" << endl;
   cout << "(S)ubtraction" << endl;
   cout << "(Q)uit" << endl << endl;
   cout << "Enter your option: ";
+}
+int main(){
+char option;
+    showMenu();
     cin >> option;
 
 cout << option;
