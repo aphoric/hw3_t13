@@ -1,6 +1,7 @@
 #include <iostream>
+using namespace std;
 
-int showMenu(){
+void showMenu(){
   cout << "Rational Numbers Calculator" << endl << endl;
   cout << "(A)ddition" << endl;
   cout << "(S)ubtraction" << endl;
