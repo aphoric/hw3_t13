@@ -21,18 +21,21 @@ void getRational(int *num, int *den){
   *den = stoi(denstr);
 }
 
-void reduce(int* num, int* den){
-  int r, gcd;
-  r = *num % *den;
-  while(r != 0){
-    *num = *den;
-    *den = r;
-    r = *num % *den;
-  }
-  gcd = *den;
-  *num /= gcd;
-  *den /= gcd;
-  }
+void AddRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
+    *anum = (num1 * den2) + 
+}
+
+void SubtactRational(){
+
+}
+
+void DisplayRational(){
+
+}
+
+void reduce(){
+
+}
 
 void add(){
   system("cls");
@@ -41,5 +44,5 @@ void add(){
 
 void subtract(){
    system("cls");
-  cout << "sub";
+   cout << "sub";
 }
