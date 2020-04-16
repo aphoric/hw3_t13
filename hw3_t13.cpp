@@ -14,11 +14,12 @@ int main(){
         showMenu();
         cin >> option;
         cin.ignore();
-    if(option == 'A'){
+    if((option == 'A') || (option == 'a')){
         add();
     }
-    else if(option == 'S')
+    else if((option == 'S') || (option == 's')){
         subtract();
+    }
     else{
         break;
     }

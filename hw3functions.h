@@ -11,14 +11,22 @@ void showMenu(){
 }
 
 void getRational(int *num, int *den){
-  string numstr, denstr, str;
-  cout << "Please enter a fraction (n/d): " << endl;
-    getline(cin, str);
-  stringstream s_string1(str);
-  getline(s_string1, numstr, '/');
-  getline(s_string1, denstr, '/');
-  *num = stoi(numstr);
-  *den = stoi(denstr);
+  while(true){
+    string numstr, denstr, str;
+    cout << "Please enter a fraction (n/d): " << endl;
+      getline(cin, str);
+    stringstream s_string1(str);
+    getline(s_string1, numstr, '/');
+    getline(s_string1, denstr, '/');
+    *num = stoi(numstr);
+    *den = stoi(denstr);
+      if(*den == 0){
+        cout << "Denominator cannot be 0 " << endl;
+      }
+      else{
+        break;
+      }
+  }
 }
 
 void AddRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
