@@ -29,12 +29,23 @@ void getRational(int *num, int *den){
   }
 }
 
+void reduce(int *num, int *den){
+  int R, gcd;
+    R = *num % *den;
+  while(R != 0){
+    *num = *den;
+    *den = R;
+    R = *num % *den; 
+  }
+}
+
 void AddRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
     *anum = (num1 * den2) + (num2 * den1);
     *aden = (den1 * den2);
+  reduce(&anum, &aden);
 }
 
-void SubtactRational(){
+void SubtactRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
 
 }
 
@@ -42,13 +53,10 @@ void DisplayRational(){
 
 }
 
-void reduce(){
- 
-}
 
 void add(){
   system("cls");
-   
+  
 }
 
 void subtract(){
