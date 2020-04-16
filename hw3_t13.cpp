@@ -9,13 +9,20 @@ Jacob Castro
 using namespace std;
 
 int main(){
-char option = '\0';
-    showMenu();
-    cin >> option;
-if(option == 'A'){
-    add();
+    char option = '\0';
+    while(true){
+        showMenu();
+        cin >> option;
+        cin.ignore();
+    if(option == 'A'){
+        add();
+    }
+    else if(option == 'S')
+        subtract();
+    else{
+        break;
+    }
 }
-else if(option == 'S')
-    subtract();
+
 return 0;
 }
