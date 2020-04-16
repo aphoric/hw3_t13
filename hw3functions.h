@@ -20,4 +20,24 @@ void getRational(int *num, int *den){
   *num = stoi(numstr);
   *den = stoi(denstr);
 }
-    
+
+void reduce(int* num, int* den){
+  int r, gcd;
+  r = *num % *den;
+  while(r != 0){
+    *num = *den;
+    *den = r;
+    r = *num % *den;
+  }
+  gcd = *den;
+  *num /= gcd;
+  *den /= gcd;
+  }
+
+void add(){
+
+}
+
+void subtract(){
+  
+}
