@@ -42,7 +42,7 @@ void reduce(int *num, int *den){
 void AddRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
     *anum = (num1 * den2) + (num2 * den1);
     *aden = (den1 * den2);
-  reduce(&anum, &aden);
+  reduce(anum, aden);
 }
 
 void SubtactRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
@@ -56,7 +56,12 @@ void DisplayRational(){
 
 void add(){
   system("cls");
-  
+  int num1, den1, num1, den2, anum, aden;
+  while(true){
+    cout << "Addition of Rational Numbers" << endl;
+    getRational(&num1, &den1);
+    cout << num1 << " " << den1;
+  }
 }
 
 void subtract(){
