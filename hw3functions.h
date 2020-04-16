@@ -12,20 +12,20 @@ void showMenu(){
 
 void getRational(int *num, int *den){
   while(true){
-    string numstr, denstr, str;
+    string numstr, denstr, r;
     cout << "Please enter a fraction (n/d): " << endl;
-      getline(cin, str);
-    stringstream s_string1(str);
-    getline(s_string1, numstr, '/');
-    getline(s_string1, denstr, '/');
+      getline(cin, r);
+    stringstream rational(r);
+    getline(rational, numstr, '/');
+    getline(rational, denstr, '/');
     *num = stoi(numstr);
     *den = stoi(denstr);
-      if(*den == 0){
-        cout << "Denominator cannot be 0 " << endl;
-      }
-      else{
-        break;
-      }
+    if(*den == 0){
+      cout << "Denominator cannot be 0";
+    }
+    else{
+      break;
+    }
   }
 }
 
