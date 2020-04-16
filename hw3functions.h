@@ -21,7 +21,7 @@ void GetRational(int *num, int *den){
     *num = stoi(numstr);
     *den = stoi(denstr);
     if(*den == 0){
-      cout << "Denominator cannot be 0";
+      cout << "Denominator cannot be 0" << endl;
     }
     else{
       break;
@@ -30,35 +30,42 @@ void GetRational(int *num, int *den){
 }
 
 void reduce(int *num, int *den){
-  int R, gcd;
-    R = *num % *den;
-  while(R != 0){
-    *num = *den;
-    *den = R;
-    R = *num % *den; 
+  int gcd, R, a, b;
+a = *num;
+b = *den;
+  while((a % b) > 0){
+    R = a % b;
+    b = a;
+    b = R;
   }
+  gcd = b;
+  *num /= gcd;
+  *den /= gcd;
 }
 
 void AddRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
     *anum = (num1 * den2) + (num2 * den1);
     *aden = (den1 * den2);
-  //reduce(anum, aden);
+  reduce(anum, aden);
 }
 
 void SubtractRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
   *anum = (num1 * den2) - (num2 * den1);
   *aden = (den1 * den2);
+  reduce(anum, aden);
 }
 
 void DisplayRational(int num, int den){
   if(den == 1){
     cout << num << endl;
   }
+  else if(num = 0){
+      cout << num << endl;
+  }
   else{
     cout << num << "/" << den << endl;
   }
 }
-
 
 void add(){
   system("cls");
@@ -68,7 +75,7 @@ void add(){
     GetRational(&num1, &den1);
     GetRational(&num2, &den2);
     AddRational(&anum, &aden, num1, den1, num2, den2);
-    cout << "The Sum is ";
+    cout << "The Answer is ";
     DisplayRational(anum, aden);
   }
 }
@@ -81,7 +88,7 @@ void subtract(){
     GetRational(&num1, &den1);
     GetRational(&num2, &den2);
     SubtractRational(&anum, &aden, num1, den1, num2, den2);
-    cout << "The Difference is ";
+    cout << "The Answer is ";
     DisplayRational(anum, aden);
-}
+  }
 }
