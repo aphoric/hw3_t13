@@ -14,6 +14,6 @@ char option;
     cin >> option;
 
 cout << option;
-
+getRational();
 return 0;
 }
