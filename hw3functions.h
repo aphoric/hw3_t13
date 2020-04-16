@@ -10,7 +10,7 @@ void showMenu(){
   cout << "Enter your option: ";
 }
 
-void getRational(int *num, int *den);{
+void getRational(int *num, int *den){
   string numstr, denstr, str;
   cout << "Please enter a fraction (n/d): " << endl;
     getline(cin, str);
