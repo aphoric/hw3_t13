@@ -35,9 +35,11 @@ void reduce(int* num, int* den){
   }
 
 void add(){
-
+  system("cls");
+  cout << "add";
 }
 
 void subtract(){
-  
+   system("cls");
+  cout << "sub";
 }
