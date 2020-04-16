@@ -13,7 +13,6 @@ char option;
     showMenu();
     cin >> option;
 
-cout << option;
-getRational();
+
 return 0;
 }
