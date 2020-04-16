@@ -10,7 +10,7 @@ void showMenu(){
   cout << "Enter your option: ";
 }
 
-void getRational(int *num, int *den){
+void GetRational(int *num, int *den){
   while(true){
     string numstr, denstr, r;
     cout << "Please enter a fraction (n/d): " << endl;
@@ -42,29 +42,45 @@ void reduce(int *num, int *den){
 void AddRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
     *anum = (num1 * den2) + (num2 * den1);
     *aden = (den1 * den2);
-  reduce(anum, aden);
+  //reduce(anum, aden);
 }
 
 void SubtactRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
-
+  *anum = (num1 * den2) - (num2 * den2);
+  *aden = (den1 * den2);
 }
 
-void DisplayRational(){
-
+void DisplayRational(int num, int den){
+  if(den == 1){
+    cout << num << endl;
+  }
+  else{
+    cout << num << "/" << den << endl;
+  }
 }
 
 
 void add(){
   system("cls");
-  int num1, den1, num1, den2, anum, aden;
+  int num1, den1, num2, den2, anum, aden;
   while(true){
     cout << "Addition of Rational Numbers" << endl;
-    getRational(&num1, &den1);
-    cout << num1 << " " << den1;
+    GetRational(&num1, &den1);
+    GetRational(&num2, &den2);
+    AddRational(&anum, &aden, num1, den1, num2, den2);
+    cout << "The Sum is ";
+    DisplayRational(anum, aden);
   }
 }
 
 void subtract(){
-   system("cls");
-   cout << "sub";
+  system("cls");
+  int num1, den1, num2, den2, anum, aden;
+  while(true){
+    cout << "Subtraction of Rational Numbers" << endl;
+    GetRational(&num1, &den1);
+    GetRational(&num2, &den2);
+    AddRational(&anum, &aden, num1, den1, num2, den2);
+    cout << "The Difference is ";
+    DisplayRational(anum, aden);
 }
