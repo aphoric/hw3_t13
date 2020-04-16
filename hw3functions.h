@@ -45,8 +45,8 @@ void AddRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
   //reduce(anum, aden);
 }
 
-void SubtactRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
-  *anum = (num1 * den2) - (num2 * den2);
+void SubtractRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
+  *anum = (num1 * den2) - (num2 * den1);
   *aden = (den1 * den2);
 }
 
@@ -80,7 +80,8 @@ void subtract(){
     cout << "Subtraction of Rational Numbers" << endl;
     GetRational(&num1, &den1);
     GetRational(&num2, &den2);
-    AddRational(&anum, &aden, num1, den1, num2, den2);
+    SubtractRational(&anum, &aden, num1, den1, num2, den2);
     cout << "The Difference is ";
     DisplayRational(anum, aden);
+}
 }
