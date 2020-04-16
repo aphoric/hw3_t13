@@ -22,7 +22,8 @@ void getRational(int *num, int *den){
 }
 
 void AddRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
-    *anum = (num1 * den2) + 
+    *anum = (num1 * den2) + (num2 * den1);
+    *aden = (den1 * den2);
 }
 
 void SubtactRational(){
@@ -34,12 +35,12 @@ void DisplayRational(){
 }
 
 void reduce(){
-
+ 
 }
 
 void add(){
   system("cls");
-  cout << "add";
+   
 }
 
 void subtract(){
