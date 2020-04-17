@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sstream>
+#include <cmath>
 using namespace std;
 
 void showMenu(){
@@ -31,8 +32,8 @@ void GetRational(int *num, int *den){
 
 void reduce(int *num, int *den){
   int gcd, R, a, b;
-a = *num;
-b = *den;
+a = abs(*num);
+b = abs(*den);
   while((a % b) > 0){
     R = a % b;
     b = a;
@@ -75,8 +76,13 @@ void add(){
     GetRational(&num1, &den1);
     GetRational(&num2, &den2);
     AddRational(&anum, &aden, num1, den1, num2, den2);
-    cout << "The Answer is ";
-    DisplayRational(anum, aden);
+      cout << "The Answer is ";
+        DisplayRational(anum, aden);
+  char choice = '\0';
+    cout << "Do you want to do more additions? (Y/N):";
+    cin >> choice; cin.ignore();
+    if (choice == 'N' || choice == 'n')
+      break;
   }
 }
 
@@ -90,5 +96,10 @@ void subtract(){
     SubtractRational(&anum, &aden, num1, den1, num2, den2);
     cout << "The Answer is ";
     DisplayRational(anum, aden);
+  char choice = '\0';
+    cout << "Do you want to do more subtractions? (Y/N):";
+    cin >> choice; cin.ignore();
+    if (choice == 'N' || choice == 'n')
+      break;
   }
 }

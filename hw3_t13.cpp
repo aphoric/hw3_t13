@@ -16,9 +16,11 @@ int main(){
         cin.ignore();
     if((option == 'A') || (option == 'a')){
         add();
+        break;
     }
     else if((option == 'S') || (option == 's')){
         subtract();
+        break;
     }
     else{
         break;
