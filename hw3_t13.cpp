@@ -1,7 +1,7 @@
 /*Team #13        CSCI/CMPE 1370       Spring 2020     Homework #3
 Jesus Guajardo
 Jacob Castro
-                     ~Description of Program~
+                Addition and Subtraction Calculator
 */
 
 #include <iostream>
@@ -26,6 +26,6 @@ int main(){
         break;
     }
 }
-
+cout << "Thank You!" << endl;
 return 0;
 }

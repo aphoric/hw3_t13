@@ -46,7 +46,7 @@ R = a % b;
   gcd = b;
   *num /= gcd;
   *den /= gcd;
-}
+} 
 
 void AddRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
     *anum = (num1 * den2) + (num2 * den1);
@@ -64,7 +64,7 @@ void DisplayRational(int num, int den){
   if(den == 1){
     cout << num << endl;
   }
-  else if(num = 0){
+  else if(num == 0){
       cout << num << endl;
   }
   else{
@@ -80,13 +80,15 @@ void add(){
     GetRational(&num1, &den1);
     GetRational(&num2, &den2);
     AddRational(&anum, &aden, num1, den1, num2, den2);
-      cout << "The Answer is ";
+      cout << "The Answer for ";
+      cout << num1 << "/" << den1 << " + " << num2 << "/" << den2 << " = ";
         DisplayRational(anum, aden);
   char choice = '\0';
     cout << "Do you want to do more additions? (Y/N):";
     cin >> choice; cin.ignore();
     if (choice == 'N' || choice == 'n')
       break;
+  system("cls");
   }
 }
 
@@ -98,7 +100,8 @@ void subtract(){
     GetRational(&num1, &den1);
     GetRational(&num2, &den2);
     SubtractRational(&anum, &aden, num1, den1, num2, den2);
-    cout << "The Answer is ";
+    cout << "The Answer for ";
+    cout << num1 << "/" << den1 << " - " << num2 << "/" << den2 << " = ";
     DisplayRational(anum, aden);
   char choice = '\0';
     cout << "Do you want to do more subtractions? (Y/N):";
@@ -106,5 +109,6 @@ void subtract(){
     if (choice == 'N' || choice == 'n'){
       break;
     }
+  system("cls");
   }
 }
