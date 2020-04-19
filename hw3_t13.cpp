@@ -1,10 +1,10 @@
 /*Team #13        CSCI/CMPE 1370       Spring 2020     Homework #3
 Jesus Guajardo
-Jacob Castro
-                Addition and Subtraction Calculator
+        Addition and Subtraction Calculator for Rationals
 */
 
 #include <iostream>
+#include <stdlib.h>
 #include "hw3functions.h"
 using namespace std;
 

@@ -1,6 +1,9 @@
+/*Team #13        CSCI/CMPE 1370       Spring 2020     Homework #3
+Jesus Guajardo*/
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <stdlib.h>
 using namespace std;
 
 void showMenu(){
