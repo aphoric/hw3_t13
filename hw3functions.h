@@ -76,42 +76,41 @@ void DisplayRational(int num, int den){
 }
 
 void add(){
-  system("cls");
   int num1, den1, num2, den2, anum, aden;
   while(true){
+    system("cls");
     cout << "Addition of Rational Numbers" << endl;
-    GetRational(&num1, &den1);
-    GetRational(&num2, &den2);
-    AddRational(&anum, &aden, num1, den1, num2, den2);
-      cout << "The Answer for ";
-      cout << num1 << "/" << den1 << " + " << num2 << "/" << den2 << " = ";
-        DisplayRational(anum, aden);
-  char choice = '\0';
+      GetRational(&num1, &den1);
+      GetRational(&num2, &den2);
+      AddRational(&anum, &aden, num1, den1, num2, den2);
+    cout << "The Answer for ";
+    cout << num1 << "/" << den1 << " + " << num2 << "/" << den2 << " = ";
+      DisplayRational(anum, aden);
+    char choice = '\0';
     cout << "Do you want to do more additions? (Y/N):";
-    cin >> choice; cin.ignore();
-    if (choice == 'N' || choice == 'n')
-      break;
-  system("cls");
+      cin >> choice; cin.ignore();
+    if (choice == 'N' || choice == 'n'){
+       break;
+    }
   }
 }
 
 void subtract(){
-  system("cls");
   int num1, den1, num2, den2, anum, aden;
   while(true){
+    system("cls");
     cout << "Subtraction of Rational Numbers" << endl;
-    GetRational(&num1, &den1);
-    GetRational(&num2, &den2);
-    SubtractRational(&anum, &aden, num1, den1, num2, den2);
+      GetRational(&num1, &den1);
+      GetRational(&num2, &den2);
+      SubtractRational(&anum, &aden, num1, den1, num2, den2);
     cout << "The Answer for ";
     cout << num1 << "/" << den1 << " - " << num2 << "/" << den2 << " = ";
-    DisplayRational(anum, aden);
-  char choice = '\0';
+      DisplayRational(anum, aden);
+    char choice = '\0';
     cout << "Do you want to do more subtractions? (Y/N):";
-    cin >> choice; cin.ignore();
+      cin >> choice; cin.ignore();
     if (choice == 'N' || choice == 'n'){
       break;
     }
-  system("cls");
   }
 }

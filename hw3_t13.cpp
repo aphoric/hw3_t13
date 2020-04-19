@@ -10,6 +10,7 @@ using namespace std;
 
 int main(){
     char option = '\0';
+    system("cls");
     while(true){
         showMenu();
         cin >> option;
@@ -26,6 +27,6 @@ int main(){
         break;
     }
 }
-cout << "Thank You!" << endl;
+        cout << "Thank You!" << endl;
 return 0;
 }
