@@ -1,6 +1,7 @@
 /*Team #13        CSCI/CMPE 1370       Spring 2020     Homework #3
 Jesus Guajardo
-        Addition and Subtraction Calculator for Rationals
+        Addition and Subtraction Calculator for Rationals 
+        while also returning the answer in its simplest form
 */
 
 #include <iostream>
@@ -17,11 +18,9 @@ int main(){
         cin.ignore();
     if((option == 'A') || (option == 'a')){
         add();
-        break;
     }
     else if((option == 'S') || (option == 's')){
         subtract();
-        break;
     }
     else{
         break;

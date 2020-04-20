@@ -33,6 +33,7 @@ void GetRational(int *num, int *den){
   }
 }
 
+//Elucid's Algorithm, Reduces the result from AddRational and Subtract Rational
 void reduce(int *num, int *den){
   int gcd, R, a, b;
 a = *num;
@@ -51,18 +52,22 @@ R = a % b;
   *den /= gcd;
 } 
 
+//Adds the given rationals: (a/b) + (c/d) = (a*d)+(c*b)/(b*d)
 void AddRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
     *anum = (num1 * den2) + (num2 * den1);
     *aden = (den1 * den2);
   reduce(anum, aden);
 }
 
+//Subtracts the given rationals: (a/b) - (c/d) = (a*d)-(c*b)/(b*d)
 void SubtractRational(int* anum, int* aden, int num1, int den1, int num2, int den2){
   *anum = (num1 * den2) - (num2 * den1);
   *aden = (den1 * den2);
   reduce(anum, aden);
 }
 
+
+//Displays the result after it was reduced
 void DisplayRational(int num, int den){
   if(den == 1){
     cout << num << endl;
@@ -75,6 +80,7 @@ void DisplayRational(int num, int den){
   }
 }
 
+//Calls to functions to get rational, then add them and reduce 
 void add(){
   int num1, den1, num2, den2, anum, aden;
   while(true){
@@ -95,6 +101,7 @@ void add(){
   }
 }
 
+//Calls to functions to get rational, then subtract them and reduce 
 void subtract(){
   int num1, den1, num2, den2, anum, aden;
   while(true){
